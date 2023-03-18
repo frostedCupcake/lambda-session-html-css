@@ -1,0 +1,65 @@
+/* TODO 
+1. variables
+2. background-color
+3. color
+4. positioning
+5. border
+6. trasform
+7. word spacing
+8. letter spacing
+9. border-radius
+10. font-properties
+11. media queries
+12. min-width and max-width in media quries
+ */
+
+:root {
+  --primary: #16213e;
+  --secondary: #9b59b6;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.session_block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 30rem;
+  border: 2px solid var(--secondary);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.session_block__heading {
+  color: var(--secondary);
+  font-size: 3rem;
+  word-spacing: 0rem;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.session_block_paragraph {
+  color: var(--secondary);
+  opacity: 0.6;
+  font-size: 1.5rem;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 480px) {
+  .session_block__heading {
+    font-size: 1.5rem;
+  }
+  .session_block_paragraph {
+    font-size: 1rem;
+  }
+  .session_block {
+    width: 80%;
+    padding: 10px;
+  }
+}
